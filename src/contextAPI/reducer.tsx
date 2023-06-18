@@ -21,6 +21,13 @@ export const reducer = (state: StateType, action: Action) => {
                 todos: state.todos.map((todo) => todo.id === action.payload ? { ...todo, isCompleted: !todo.isCompleted } : todo)
             }
 
+        case "REMOVE_TODO":
+
+            return {
+                ...state,
+                todos: state.todos.filter((todo) => todo.id !== action.payload)
+            }
+
         default:
             throw new Error();
     }
