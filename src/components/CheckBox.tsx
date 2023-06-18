@@ -1,11 +1,12 @@
-import { useDispatch } from "../contextAPI/hooks"
-import { Todo } from "../types/types"
+import { useDispatch } from "../contextAPI/hooks";
+import { Todo } from "../types/types";
 
 export default function CheckBox({ todo }: { todo: Todo }) {
     const dispatch = useDispatch()
-    function changeStatus(id: number) {
+    const changeStatus = (id: number) => {
         dispatch({ type: "CHANGE_STATUS", payload: id })
-    }
+    };
+
     return (
         <label className="relative inline-flex items-center cursor-pointer">
             <input
