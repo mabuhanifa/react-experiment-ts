@@ -24,22 +24,24 @@ export default function Todos() {
     return (
         <section className="p-10 ">
 
-            <form onSubmit={(e) => createTodo(e)} className="flex items-center gap-2">
-                <input
-                    type="text"
-                    name="title"
-                    value={title}
-                    className="bg-gray-300 rounded-md p-2"
-                    onChange={(e) => setTitle(e.target.value)} />
-                <button
-                    type="submit"
-                    onSubmit={(e) => createTodo(e)}
-                    className="bg-blue-500 text-white rounded-md p-2.5">
-                    <VscAdd size={20} />
-                </button>
-            </form>
+            <div className="flex justify-center">
+                <form onSubmit={(e) => createTodo(e)} className="flex items-center gap-2">
+                    <input
+                        type="text"
+                        name="title"
+                        value={title}
+                        className="bg-gray-300 rounded-md p-2"
+                        onChange={(e) => setTitle(e.target.value)} />
+                    <button
+                        type="submit"
+                        onSubmit={(e) => createTodo(e)}
+                        className="bg-blue-500 text-white rounded-md p-2.5">
+                        <VscAdd size={20} />
+                    </button>
+                </form>
+            </div>
 
-            <div>
+            <div className="flex flex-col justify-center items-center">
                 {
                     todos && todos.map((todo) => (
                         <Todo todo={todo} key={todo.id} />

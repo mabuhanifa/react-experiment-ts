@@ -6,7 +6,8 @@ export type Todo = {
 
 export type Action =
   | { type: "ADD_TODO"; payload: Todo }
-  | { type: "CHANGE_STATUS"; payload: number };
+  | { type: "CHANGE_STATUS"; payload: number }
+  | { type: "REMOVE_TODO"; payload: number };
 
 export type StateType = { todos: Todo[] };
 
