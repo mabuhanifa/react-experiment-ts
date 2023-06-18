@@ -4,7 +4,7 @@ import { Context } from "./context";
 
 export function useSelector<T>(selector: (state: StateType) => T) {
     const { state } = useContext(Context);
-    return selector(state);
+    return selector(state)
 }
 
 export function useDispatch() {
