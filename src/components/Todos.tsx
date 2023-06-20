@@ -21,7 +21,7 @@ export default function Todos() {
   };
 
   return (
-    <section className="p-10 ">
+    <section className="p-2 py-10 md:p-10 ">
       <div className="flex justify-center">
         <form
           onSubmit={(e) => createTodo(e)}
@@ -31,8 +31,9 @@ export default function Todos() {
             type="text"
             name="title"
             value={title}
-            className="bg-gray-300 rounded-md p-2"
+            className="bg-gray-300 rounded-md p-2 placeholder:text-gray-600"
             onChange={(e) => setTitle(e.target.value)}
+            placeholder="Add a todo"
           />
           <button
             type="submit"
