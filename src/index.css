@@ -13,3 +13,6 @@
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
     rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
+.icons {
+  @apply h-10 w-10 bg-gray-900 rounded-full flex justify-center items-center cursor-pointer;
+}
